@@ -178,4 +178,50 @@ table
         td --> cột
 ```
 
-Form: Biểu mẫu
+6. Form
+
+```
+form 1
+    field 1
+    field 2
+    field 3
+    button
+form 2
+    field 1
+    field 2
+    field 3
+    button
+form 3
+    field 1
+    field 2
+    field 3
+    button
+```
+
+- các phải ngang hàng (Độc lập)
+- trong 1 form sẽ nhiều trường (field) + nút gửi (Đẩy dữ liệu lên back-end)
+
+Thuộc tính trong form
+
+- method: Phương thức gửi dữ liệu lên server (get, post)
+- action: Đường dẫn phía server
+
+Trong quá trình học html -> Chỉ cần quan tâm đến các trường thường xuất hiện trong form
+
+Nhóm 1: Các trường nhập liệu 1 dòng
+
+```
+<input type="kieu-du-lieu"/>
+```
+
+- placeholder: Dòng mô tả
+- name: Định danh để gửi dữ liệu lên server
+- id: Định danh phía giao diện
+- type: kiểu dữ liệu
+
+* text --> Mặc định, nhận bất kỳ
+* number --> Chỉ nhận số
+* email --> Chỉ nhận email
+* password --> Mã hóa dạng password
+* date --> Ngày tháng năm
+* file --> Chọn file (Dùng để upload)

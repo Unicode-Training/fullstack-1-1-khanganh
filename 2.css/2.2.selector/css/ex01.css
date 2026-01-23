@@ -1,0 +1,68 @@
+/* * {
+    color: red;
+} */
+
+/* #title {
+    color: red;
+}
+.sub-title {
+    color: green;
+}
+p {
+    color: blueviolet;
+} */
+
+/* .box h2 {
+    color: red;
+}
+
+.content h2 {
+    color: green;
+}
+
+.box2 > h3 {
+    color: blueviolet;
+}
+.box2 > div > h3 {
+    color: blue;
+} */
+
+/* .product.feature {
+    color: red;
+}
+
+#section.box.first {
+    color: red;
+} */
+
+/* h2.title {
+    color: red;
+} */
+
+/* h2 ~ p {
+    color: red;
+} */
+/* h2 + p {
+    color: red;
+} */
+
+/* h2:hover {
+    color: red;
+}
+h3:active {
+    color: green;
+}
+input:focus {
+    background: yellow;
+}
+button:focus {
+    background: green;
+    color: #fff;
+} */
+
+.checkbox input:checked + span {
+    color: red;
+}
+.radio input:checked + span {
+    color: green;
+}
