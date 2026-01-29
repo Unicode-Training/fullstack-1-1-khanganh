@@ -56,3 +56,17 @@ Cú pháp: selector:ten-lop-gia
 - active -> Click chuột và giữ
 - focus -> Áp dụng trong form
 - checked --> Khi radio, checkbox được check
+
+## Đơn vị
+
+- px --> Điểm ảnh (Tuyệt đối)
+- em --> Tỷ lệ với cỡ chữ của phần tử cha gần nhất
+- rem --> Tỷ lệ với cỡ chữ của phần tử gốc (html)
+- % --> Tỷ lệ với phần tử cha
+- vh
+- vw
+
+## Giá trị kế thừa
+
+- initial: Kế thừa mặc định của trình duyệt
+- inherit: Kế thừa từ thẻ cha

@@ -1,0 +1,62 @@
+/* button:disabled {
+    background: #ccc;
+    color: #ddd;
+}
+input:disabled {
+    background: #ccc;
+    color: #ddd;
+} */
+
+/* .products h2:first-child {
+    color: green;
+}
+.products h2:last-child {
+    color: red;
+}
+.products h2:nth-child(2n + 1) {
+    color: blueviolet;
+} */
+
+/* .products h2:first-of-type {
+    color:  red;
+}
+.products h2:last-of-type {
+    color: green;
+} */
+
+/* .products h2:nth-of-type(4) {
+    color: red;
+} */
+
+/* .posts h2:not(.active, .inactive) {
+    color: red;
+} */
+
+/* .posts .active, .posts .inactive {
+    color: red;
+} */
+
+/* .title::before {
+    content: '';
+}
+.title::after {
+    content: 'B';
+} */
+
+.content::first-letter {
+    color: red;
+}
+.content::first-line {
+    color: green;
+}
+.content::selection {
+    background: black;
+    color: yellow;
+}
+
+input {
+    color: green;
+}
+input:focus::placeholder {
+    color: red;
+}
