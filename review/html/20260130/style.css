@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arimo", sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+  color: dimgray;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+/*
+  Left Content
+*/
+.left-content {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.left-content ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.50);
+}
+
+.left-content ul li:last-of-type {
+  border-bottom: none;
+}
+
+.left-content ul li a {
+  display: flex;
+  gap: 10px;
+}
+
+.left-content ul li a img {
+  width: 120px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+/*
+  Main Content
+*/
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.main-content img {
+  max-width: 559px;
+  border-radius: 5px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.main-content ul {
+  font-size: 14px;
+}
+
+.main-content ul li::before {
+  content: "●";
+  color: mediumvioletred;
+  width: 1px;
+  margin-right: 5px;
+}
+
+/*
+  Right Content
+ */
+
+.right-content {
+  padding: 20px 0;
+}
+
+.right-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.right-content ul li a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-content img {
+  max-width: 287px;
+  border-radius: 5px;
+}
