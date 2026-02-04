@@ -38,10 +38,11 @@ a:hover {
 .left-content {
   font-size: 14px;
   font-weight: lighter;
+  margin-top: 8px;
 }
 
 .left-content ul li {
-  padding: 20px 0;
+  padding: 12px 0;
   border-bottom: 1px solid rgba(211, 211, 211, 0.50);
 }
 
@@ -70,12 +71,12 @@ a:hover {
   padding: 20px 0;
 }
 
-.main-content img {
+.main-content a img {
   max-width: 559px;
   border-radius: 5px;
 }
 
-.main-content h1 {
+.main-content a h1 {
   font-size: 28px;
   font-weight: bold;
 }
