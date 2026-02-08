@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+    margin: 30px auto;
+  width: 80%;
+  position: relative;
+}
+
+.main ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main ul li:first-child {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.popup {
+  display: none;
+}
+
+.container:has(#modal-toggle:checked) .popup {
+  display: block;
+}
+
+.popup {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.popup ul {
+  position: absolute;
+  inset: 0;
+  background: white;
+  margin: auto;
+  width: 50%;
+  height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup ul li:first-child {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.btn {
+  width: fit-content;
+  padding: 10px;
+  background: darkgreen;
+  color: white;
+  border-radius: 5px;
+}
