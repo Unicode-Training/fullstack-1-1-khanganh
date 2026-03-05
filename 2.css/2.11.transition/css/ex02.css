@@ -1,0 +1,29 @@
+button {
+  margin: 30px auto;
+  display: block;
+  border: 0;
+  background: green;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 99px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 100%;
+  background: red;
+  transition: right 0.3s;
+}
+button span {
+  position: relative;
+}
+button:hover::before {
+  right: 0;
+}

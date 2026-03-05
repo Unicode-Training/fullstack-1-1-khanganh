@@ -1,0 +1,28 @@
+/*
+overflow: visible | hidden | auto | scroll
+overflow-x
+overflow-y
+*/
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  margin: 30px auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.box p {
+  width: 300px;
+}
+
+.product {
+  width: 200px;
+  border: 1px solid red;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product img {
+  max-width: 100%;
+  display: block;
+}

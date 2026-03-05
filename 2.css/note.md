@@ -143,3 +143,74 @@ Nếu width = height, radius >= 50% --> hình tròn
 - flex-shrink: Thiết lập tỷ lệ co lại (Mặc định = 1, tự động co lại)
 
 - order: Sắp xếp các item theo thứ tự chỉ định
+
+## Responsive
+
+- Responsive kỹ thuật CSS cho phép thay đổi giao diện dựa trên kích thước màn hình
+- Mục đích: Thiết kế giao diện trang web tương thích với các thiết bị, trình duyệt,...
+
+Breakpoint là gì?
+
+- Điểm dừng dựa kích thước màn hình mà tại điểm đó giao diện sẽ thay đổi
+- Gọi điểm neo
+
+Các breakpoint phổ biến
+
+- 576px
+- 768px
+- 992px
+- 1200px
+- 1400px
+
+Chú ý 3 điểm
+
+```
+< 768px
+< 992px
+>= 992px
+```
+
+Làm sao để áp dụng vào CSS
+
+```css
+selector {
+  thuoctinh: giatri;
+}
+@media screen and (max-width: 991.98px) {
+  selector {
+    thuoctinh: giatri;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  selector {
+    thuoctinh: giatri;
+  }
+}
+```
+
+Note: Công thức tính width theo gap
+
+```css
+width: calc(100% / column - gap + (gap / column));
+```
+
+## Transition
+
+- Delay quá trình chuyển động của các thuộc tính css -> Tạo thành hiệu ứng
+- Chỉ áp dụng với các thuộc tính có giá trị là số
+
+Các thuộc tính
+
+- transition-property: Nhận vào tên các thuộc tính muốn có transition
+- transition-duration: Nhận vào thời gian của quá trình chuyển động (s, ms)
+- transition-delay: Nhận vào thời gian trễ trước khi hiệu ứng bắt đầu
+- transition-timing-function: Nhận vào các giá trị quy ước về tốc độ di chuyển trên mỗi quãng đường
+
+* ease: chậm - nhanh - chậm
+* ease-in: chậm - nhanh
+* ease-out: nhanh - chậm
+* ease-in-out: chậm - nhanh - chậm
+* linear: đều
+
+- transtion: property duration delay timing-function
