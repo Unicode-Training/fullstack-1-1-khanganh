@@ -1,0 +1,188 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 200px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #130058;
+}
+
+.menu ul li {
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.menu ul li a {
+  color: #130058;
+}
+
+.menu ul li:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #3902ff;
+}
+
+.menu ul li:hover a {
+  color: #3902ff;
+}
+
+.menu ul li a:hover {
+  color: #3902ff;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #3902ff;
+  color: white;
+  border-radius: 99px;
+  transition: background-color 0.3s ease;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.contact button:hover {
+  cursor: pointer;
+  background: #130058;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.hamburger span {
+  border: 1px solid #130058;
+}
+
+.navbar-vertical {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.navbar-vertical .backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-vertical > div {
+  background: #000;
+  height: 100%;
+  padding: 30px;
+}
+
+.navbar-vertical ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbar-vertical ul li a {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.navbar-vertical ul li:hover a {
+  color: lightgray;
+}
+
+.container:has(#hamburger-toggle:checked) .navbar-vertical {
+  display: block;
+}
+
+@media screen and (max-width: 1200.98px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-vertical > div {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .navbar-vertical div {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .navbar-vertical > div {
+    width: 80%;
+  }
+}
