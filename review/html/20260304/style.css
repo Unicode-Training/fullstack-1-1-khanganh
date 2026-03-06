@@ -40,6 +40,11 @@ a {
   width: 200px;
 }
 
+.menu {
+  margin-right: auto;
+  margin-left: 160px;
+}
+
 .menu ul {
   display: flex;
   justify-content: space-between;
