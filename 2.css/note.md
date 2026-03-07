@@ -214,3 +214,36 @@ Các thuộc tính
 * linear: đều
 
 - transtion: property duration delay timing-function
+
+## Animation
+
+1. keyframes
+
+- Kịch bản của hiệu ứng
+- Cú pháp:
+
+```css
+@keyframes ten-hieu-ung {
+  from {
+    thuoctinh: giatri;
+  }
+  p2% {
+    thuoctinh: giatri;
+  }
+  p3% {
+    thuoctinh: giatri;
+  }
+  ... to {
+    thuoctinh: giatri;
+  }
+}
+```
+
+2. Sử dụng keyframes
+
+- animation-name: ten-hieu-ung (keyframe)
+- animation-duration: thoi-gian-chay
+- animation-delay: thoi-gian-cho
+- animation-timing-function: ease | ease-in | ease-out | ease-in-out | linear
+- animation-iteration-count: so-lan-chay
+- animation: name duration delay timing-function iteration-count

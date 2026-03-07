@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring {
+  width: 540px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: yellow;
+  position: relative;
+
+  animation-name: circle-spinning;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.ring::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-right-color: red;
+  background: gray;
+  animation: spin 2s linear infinite;
+}
+
+.ring::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  background: #ececec;
+  border-radius: 50%;
+}
+
+@keyframes circle-spinning {
+  100% {
+    transform: rotate(360deg);
+  }
+}
