@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      .container {
+        @apply max-w-[1300px] mx-auto;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #03081f;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="py-5">
+      <div class="container">
+        <div class="flex items-center">
+          <div>
+            <a href="#">
+              <img src="./images/logo.png" alt="" class="h-[40px]" />
+            </a>
+          </div>
+          <!--End logo-->
+          <div class="flex w-full justify-end items-center gap-5">
+            <ul
+              class="flex gap-5 [&>li>a]:block [&>li>a]:px-6 [&>li>a]:py-2 [&>li>a]:rounded-full hover:[&>li>a]:bg-[#FC8A06] hover:[&>li>a]:text-white [&>li>a]:font-medium"
+            >
+              <li><a href="#" class="bg-[#FC8A06] text-white">Home</a></li>
+              <li><a href="#">Browse Menu</a></li>
+              <li><a href="#">Special Offers</a></li>
+              <li><a href="#">Restaurants</a></li>
+              <li><a href="#">Track Order</a></li>
+            </ul>
+            <a
+              class="flex items-center gap-2 bg-[#03081F] text-white px-7 py-3 rounded-full"
+              href="#"
+              ><img
+                src="./images/user-icon.png"
+                class="w-[25px] h-auto"
+              />Login/Signup</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

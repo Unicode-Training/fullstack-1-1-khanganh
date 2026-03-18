@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style type="text/tailwindcss">
+      /*
+        Custom style
+      */
+    </style>
+  </head>
+  <body class="dark:bg-[#403e3e] dark:text-white">
+    <main class="flex gap-5">
+      <aside
+        class="group/sidebar w-[220px] bg-[#ddd] h-screen relative p-3 dark:bg-[#211f1f]"
+      >
+        <div
+          class="absolute top-0 right-0 bottom-0 w-[5px] bg-[#ccc] opacity-0 group-hover/sidebar:opacity-100 cursor-ew-resize transition duration-[400ms] ease-[ease] delay-1000"
+        ></div>
+        <div class="group/heading flex items-center justify-between">
+          <h2 class="text-xl font-semibold dark:text-white">Sidebar</h2>
+          <i
+            class="fa-solid fa-angles-left cursor-pointer text-gray-400 opacity-0 group-hover:opacity-100 group-hover/heading:opacity-100 dark:text-white"
+          ></i>
+        </div>
+        <ul
+          class="[&>li]:border [&>li]:border-[#ddd] [&_ul]:bg-cyan-500 [&_ul]:pl-5 [&_ul]:hidden [&>li]:hover:[&_ul]:block dark:[&_a]:text-white"
+        >
+          <li><a href="#">Menu 1</a></li>
+          <li>
+            <a href="#">Menu 2</a>
+            <ul>
+              <li><a href="#">Menu 2.1</a></li>
+              <li><a href="#">Menu 2.2</a></li>
+              <li><a href="#">Menu 2.3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Menu 3</a></li>
+        </ul>
+      </aside>
+      <div class="flex-1">
+        <button class="js-theme-btn">Dark Mode</button>
+        <h2>Content</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut possimus
+          molestiae itaque corporis odit, consequatur, tempore, error modi
+          maiores beatae suscipit atque excepturi. Nihil voluptatum, itaque
+          repellendus asperiores voluptas odio.
+        </p>
+        <div>
+          <img src="./images/documents.png" alt="" class="dark:hidden" />
+          <img
+            src="./images/documents-dark.png"
+            alt=""
+            class="hidden dark:inline-block"
+          />
+        </div>
+        <button
+          class="flex items-center gap-2 mt-3 px-3 py-2 rounded-full bg-green-800 text-white cursor-pointer"
+        >
+          <span
+            class="inline-block w-[20px] h-[20px] rounded-[50%] border-[2px] border-white relative before:content[''] before:block before:w-[20px] before:h-[20px] before:border-[2px] before:absolute before:-inset-[2px] before:rounded-[50%] before:border-t-gray-500 animate-spin"
+          ></span>
+          Đăng ký ngay
+        </button>
+      </div>
+    </main>
+    <script>
+      const themeBtn = document.querySelector(".js-theme-btn");
+      themeBtn.addEventListener("click", () => {
+        const htmlEl = document.querySelector("html");
+        htmlEl.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
