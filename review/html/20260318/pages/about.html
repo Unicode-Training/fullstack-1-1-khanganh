@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive/SignUp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      plugins: [
+        function({
+          addUtilities
+        }) {
+          addUtilities({
+            '.text-gradient': {
+              'color': '#b79bcc',
+              'background-image': 'linear-gradient(45deg, #b79bcc 19%, #81718b 42%, #d158e5 100%)',
+              'background-clip': 'text',
+              '-webkit-background-clip': 'text',
+              '-webkit-text-fill-color': 'transparent'
+            },
+            '.custom-box-shadow': {
+              'box-shadow': 'rgba(149, 157, 165, 0.2) 0px 8px 24px'
+            },
+          })
+        },
+      ],
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    html {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+    }
+
+    .hambuger_menu {
+      display: none;
+    }
+
+    #menu-toggle:checked~.hambuger_menu {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+  <input type="checkbox" id="menu-toggle" class="hidden">
+  <div class="hambuger_menu fixed inset-0 z-50 bg-black flex-col justify-center items-center">
+    <p class="fixed top-0 p-4 bg-white w-full flex justify-between items-center">
+      <a href="#"><img src="../images/exclusive_logo.png" alt=""></a>
+      <label for="menu-toggle" class="cursor-pointer text-black text-2xl font-light pr-2">
+        <img class="w-4 h-4" src="../images/close.png" alt="">
+      </label>
+    </p>
+    <ul class="flex flex-col gap-8 text-gradient text-4xl">
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      <li>
+        <a href="./contact.html">Contact</a>
+      </li>
+      <li class="border-b-[0.2px] border-b-[#aa64ba]">
+        <a href="./about.html">About</a>
+      </li>
+      <li>
+        <a href="./signUp.html">Sign Up</a>
+      </li>
+      <li>
+        <a href="./login.html">Log In</a>
+      </li>
+    </ul>
+  </div>
+
+  <header class="bg-black">
+    <div class="min-h-[48px] max-w-[1200px] mx-auto flex justify-center text-white relative">
+      <ul class="flex items-center gap-3">
+        <li class="max-md:py-2 font-light text-center">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</li>
+        <li class="max-sm:px-2 max-sm:border-0 max-sm:text-gradient flex justify-center items-center h-full font-semibold border-black border-b-[1px] hover:border-b-[1px] hover:border-white cursor-pointer transition">ShopNow</li>
+      </ul>
+      <ul class="hidden md:flex items-center gap-3 absolute right-0 bottom-0 top-0 px-4 py-2">
+        <li class="font-light">English</li>
+        <li class="cursor-pointer"><img src="../images/vector.png" alt=""></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="menu border-b-[1px]">
+    <div class="max-lg:px-2 max-md:mt-3 mt-8 mb-3 h-[48px] max-w-[1200px] mx-auto flex justify-between items-center">
+      <div class="flex justify-between items-center cursor-pointer">
+        <a href="../index.html"><img src="../images/exclusive_logo.png" alt=""></a>
+      </div>
+      <div class="w-1/2 max-md:w-full flex justify-center">
+        <ul class="flex max-md:justify-end max-md:gap-4 max-sm:hidden justify-evenly items-center w-full font-normal">
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="./contact.html">Contact</a>
+          </li>
+          <li class="border-b-[1px] border-gray-300 transition cursor-pointer">
+            <a href="#">About</a>
+          </li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="./signUp.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="max-md:hidden flex justify-between items-center gap-4">
+          <li class="flex items-center gap-6 rounded-md px-4 py-2 bg-[#F5F5F5]">
+            <input class="bg-[#F5F5F5] font-light text-sm focus:outline-none" type="text" placeholder="What are you looking for?">
+            <img class="cursor-pointer" src="../images/search.png" alt="">
+          </li>
+          <li class="p-1 hover:bg-gray-50 rounded-full cursor-pointer transition"><img src="../images/wishlist.png" alt=""></li>
+          <li class="p-1 hover:bg-gray-50 rounded-full cursor-pointer transition"><img src="../images/cart_with_buy.png" alt=""></li>
+        </ul>
+      </div>
+      <label for="menu-toggle" class="block sm:hidden hambuger cursor-pointer">
+        <ul class="flex flex-col gap-1 items-center px-2">
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+        </ul>
+      </label>
+    </div>
+  </div>
+
+  <div class="path max-lg:px-2 max-md:mt-3 m-8 max-w-[1200px] mx-auto flex gap-4 items-center">
+    <span class="font-light text-[14px] text-[#808080]">
+      <a href="../index.html">Home</a>
+    </span>
+    <span class="text-[#808080] font-light rotate-[15deg]">/</span>
+    <span class="font-light text-[14px]">About</span>
+  </div>
+
+  <div class="about my-16">
+    <div class="flex max-sm:flex-col">
+      <div class="max-sm:order-2 max-sm:basis-[100%] basis-1/2 flex justify-end items-center">
+        <div class="max-w-[600px] w-full px-8 flex">
+          <ul class="flex flex-col gap-8">
+            <li>
+              <span class="text-[54px] font-semibold">Our Story</span>
+            </li>
+            <li class="font-light">
+              Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.
+            </li>
+            <li class="font-light">
+              Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging from consumer.
+            </li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-sm:order-1 max-sm:basis-[100%] basis-1/2">
+        <a href="#"><img class="w-full h-full object-cover" src="../images/pages/about/side-image.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="categories max-lg:px-2 max-w-[1200px] mx-auto py-8">
+    <div class="mb-10">
+      <ul class="flex justify-between max-sm:justify-center max-sm:flex-wrap max-sm:gap-2">
+        <li class="w-[270px] h-[230px] border-[1px] rounded-md flex flex-col items-center justify-center gap-4 cursor-pointer hover:bg-[#DB4444] transition hover:text-white">
+          <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+            <img class="w-[30px] h-[30px]" src="../images/pages/about/icon-shop.png" alt="">
+          </div>
+          <div class="flex flex-col gap-1 items-center">
+            <span class="font-bold text-3xl">10.5k</span>
+            <span class="font-light">Sallers active our site</span>
+          </div>
+        </li>
+        <li class="w-[270px] h-[230px] border-[1px] rounded-md flex flex-col items-center justify-center gap-4 cursor-pointer bg-[#DB4444] transition custom-box-shadow">
+          <div class="bg-white p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+            <img class="w-[30px] h-[30px]" src="../images/pages/about/icon-sale.png" alt="">
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <span class="font-bold text-3xl">33k</span>
+            <span class="font-light">Monthly Product Sales</span>
+          </div>
+        </li>
+        <li class="w-[270px] h-[230px] border-[1px] rounded-md flex flex-col items-center justify-center gap-4 cursor-pointer hover:bg-[#DB4444] transition hover:text-white">
+          <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+            <img class="w-[30px] h-[30px]" src="../images/pages/about/icon-shopping-bag.png" alt="">
+          </div>
+          <div class="flex flex-col gap-1 items-center">
+            <span class="font-bold text-3xl">45.5k</span>
+            <span class="font-light">Customer active in our site</span>
+          </div>
+        </li>
+        <li class="w-[270px] h-[230px] border-[1px] rounded-md flex flex-col items-center justify-center gap-4 cursor-pointer hover:bg-[#DB4444] transition hover:text-white">
+          <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+            <img class="w-[30px] h-[30px]" src="../images/pages/about/icon-money-bag.png" alt="">
+          </div>
+          <div class="flex flex-col gap-1 items-center">
+            <span class="font-bold text-3xl">25k</span>
+            <span class="font-light">Anual gross sale in our site</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="who max-lg:px-2 max-w-[1200px] mx-auto py-8 flex flex-col gap-8">
+    <div class="flex max-sm:flex-col gap-8">
+      <div class="basis-1/3">
+        <ul class="flex flex-col gap-6 justify-center">
+          <li class="bg-[#f5f5f5] rounded-md flex justify-center">
+            <a href=""><img class="mt-8 ml-8 mr-8" src="../images/pages/about/image-46.png" alt=""></a>
+          </li>
+          <li class="flex flex-col gap-2">
+            <span class="text-3xl">Will Smith</span>
+            <span class="font-light">Founder & Chairman</span>
+            <span>
+              <ul class="flex gap-4 items-center">
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-6 h-6" src="../images/pages/about/icon-twitter.png" alt=""></a></li>
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-5 h-5" src="../images/pages/about/icon-instagram.png" alt=""></a></li>
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-5 h-5" src="../images/pages/about/icon-linkedin.png" alt=""></a></li>
+              </ul>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="basis-1/3">
+        <ul class="flex flex-col gap-6 justify-center">
+          <li class="bg-[#f5f5f5] rounded-md flex justify-center">
+            <a href=""><img class="mt-8 ml-8 mr-8" src="../images/pages/about/image-51.png" alt=""></a>
+          </li>
+          <li class="flex flex-col gap-2">
+            <span class="text-3xl">Will Smith</span>
+            <span class="font-light">Founder & Chairman</span>
+            <span>
+              <ul class="flex gap-4 items-center">
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-6 h-6" src="../images/pages/about/icon-twitter.png" alt=""></a></li>
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-5 h-5" src="../images/pages/about/icon-instagram.png" alt=""></a></li>
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-5 h-5" src="../images/pages/about/icon-linkedin.png" alt=""></a></li>
+              </ul>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="basis-1/3">
+        <ul class="flex flex-col gap-6 justify-center">
+          <li class="bg-[#f5f5f5] rounded-md flex justify-center">
+            <a href=""><img class="mt-8 ml-8 mr-8" src="../images/pages/about/image-47.png" alt=""></a>
+          </li>
+          <li class="flex flex-col gap-2">
+            <span class="text-3xl">Will Smith</span>
+            <span class="font-light">Founder & Chairman</span>
+            <span>
+              <ul class="flex gap-4 items-center">
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-6 h-6" src="../images/pages/about/icon-twitter.png" alt=""></a></li>
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-5 h-5" src="../images/pages/about/icon-instagram.png" alt=""></a></li>
+                <li class="cursor-pointer hover:bg-slate-100 transition rounded-full p-1"><a href=""><img class="w-5 h-5" src="../images/pages/about/icon-linkedin.png" alt=""></a></li>
+              </ul>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="flex justify-center gap-4">
+      <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+      <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+      <li class="h-3 w-3 rounded-full bg-[#DB4444] border-[1px] border-white ring-2 ring-[#b2b2b2]"></li>
+      <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+      <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+    </ul>
+  </div>
+
+  <div class="support max-w-[1200px] mx-auto py-16 mb-8">
+    <div class="flex flex-wrap justify-center items-center gap-14 max-sm:gap-8">
+      <div class="flex flex-col justify-between items-center gap-2">
+        <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+          <img class="w-[30px]" src="../images/support/delivery.png" alt="">
+        </div>
+        <div class="flex items-center flex-col gap-1">
+          <span class="text-[20px] font-semibold">FREE AND FAST DELIVERY</span>
+          <span class="text-[14px] font-light">Free delivery for all orders over $140</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-between items-center gap-2">
+        <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+          <img class="w-[30px]" src="../images/support/customer-service.png" alt="">
+        </div>
+        <div class="flex items-center flex-col gap-1">
+          <span class="text-[20px] font-semibold">24/7 CUSTOMER SERVICE</span>
+          <span class="text-[14px] font-light">Friendly 24/7 customer support</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-between items-center gap-2">
+        <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+          <img class="w-[30px]" src="../images/support/secure.png" alt="">
+        </div>
+        <div class="flex items-center flex-col gap-1">
+          <span class="text-[20px] font-semibold">MONEY BACK GUARANTEE</span>
+          <span class="text-[14px] font-light">We reurn money within 30 days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-black text-white">
+    <div class="max-lg:px-2 min-h-[400px] max-w-[1200px] mx-auto flex justify-between">
+      <ul class="w-full flex flex-wrap max-sm:gap-8 justify-between max-sm:py-4 py-16">
+        <li class="max-sm:order-1 flex flex-col gap-4 max-sm:w-full">
+          <span class="text-[24px] font-bold max-sm:w-full">Exclusive</span>
+          <span class="text-[20px] font-medium">Subscribe</span>
+          <span class="text-[16px] font-light">Get 10% off your first order</span>
+          <span class="relative inline-block">
+            <input class="max-sm:w-full border border-white rounded-sm bg-black pl-3 pr-8 py-2 font-light text-sm focus:outline-none" type="text" placeholder="Enter your email">
+            <img class="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4" src="../images/footer/send.png" alt="">
+          </span>
+        </li>
+        <li class="max-sm:order-3 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Support</span>
+          <span class="text-[16px] font-light">111 Bijoy sarani, Dhaka,<br>DH 1515,Bangladesh.</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="mailto:exclusive@gmail.com">exclusive@gmail.com</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition href=" href="tel:88015-88888-9999">+88015-88888-9999</a></span>
+        </li>
+        <li class="max-sm:order-4 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Account</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">My Account</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Login / Register</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Cart</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Wishlist</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Shop</a></span>
+        </li>
+        <li class="max-sm:order-5 max-sm:w-full flex flex-col gap-4 ">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Quick Link</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Privacy Policy</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Terms Of Use</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">FAQ</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Contact</a></span>
+        </li>
+        <li class="max-sm:order-2 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Download App</span>
+          <span class="text-[12px] font-light text-gray-400">Save $3 with App New User Only</span>
+          <ul class="flex gap-1">
+            <li>
+              <img src="../images/footer/qr-code.png" alt="">
+            </li>
+            <li class="flex flex-col">
+              <a href="#"><img src="../images/footer/app-store.png" alt=""></a>
+              <a href="#"><img src="../images/footer/google-play.png" alt=""></a>
+            </li>
+          </ul>
+          <ul class="flex justify-start items-center gap-8">
+            <li><a href="#"><img src="../images/footer/fb.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/footer/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/footer/in.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/footer/linkedin.png" alt=""></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center p-4 text-[#3d3d3d] font-light border-t-[0.5px] border-[#3d3d3d]">
+      Copyright Rimel 2022. All right reserved
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive/Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      plugins: [
+        function({
+          addUtilities
+        }) {
+          addUtilities({
+            '.text-gradient': {
+              'color': '#b79bcc',
+              'background-image': 'linear-gradient(45deg, #b79bcc 19%, #81718b 42%, #d158e5 100%)',
+              'background-clip': 'text',
+              '-webkit-background-clip': 'text',
+              '-webkit-text-fill-color': 'transparent'
+            },
+          })
+        },
+      ],
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    html {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+    }
+
+    .hambuger_menu {
+      display: none;
+    }
+
+    #menu-toggle:checked~.hambuger_menu {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+  <input type="checkbox" id="menu-toggle" class="hidden">
+  <div class="hambuger_menu fixed inset-0 z-50 bg-black flex-col justify-center items-center">
+    <p class="fixed top-0 p-4 bg-white w-full flex justify-between items-center">
+      <a href="#"><img src="../images/exclusive_logo.png" alt=""></a>
+      <label for="menu-toggle" class="cursor-pointer text-black text-2xl font-light pr-2">
+        <img class="w-4 h-4" src="../images/close.png" alt="">
+      </label>
+    </p>
+    <ul class="flex flex-col gap-8 text-gradient text-4xl">
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      <li>
+        <a href=" ./contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="./about.html">About</a>
+      </li>
+      <li>
+        <a href="./signUp.html">Sign Up</a>
+      </li>
+      <li class="border-b-[0.2px] border-b-[#aa64ba]">
+        <a href="./login.html">Log In</a>
+      </li>
+    </ul>
+  </div>
+
+  <header class="bg-black">
+    <div class="min-h-[48px] max-w-[1200px] mx-auto flex justify-center text-white relative">
+      <ul class="flex items-center gap-3">
+        <li class="max-md:py-2 font-light text-center">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</li>
+        <li class="max-sm:px-2 max-sm:border-0 max-sm:text-gradient flex justify-center items-center h-full font-semibold border-black border-b-[1px] hover:border-b-[1px] hover:border-white cursor-pointer transition">ShopNow</li>
+      </ul>
+      <ul class="hidden md:flex items-center gap-3 absolute right-0 bottom-0 top-0 px-4 py-2">
+        <li class="font-light">English</li>
+        <li class="cursor-pointer"><img src="../images/vector.png" alt=""></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="menu border-b-[1px]">
+    <div class="max-lg:px-2 max-md:mt-3 mt-8 mb-3 h-[48px] max-w-[1200px] mx-auto flex justify-between items-center">
+      <div class="flex justify-between items-center cursor-pointer">
+        <a href="#"><img src="../images/exclusive_logo.png" alt=""></a>
+      </div>
+      <div class="w-1/2 max-md:w-full flex justify-center">
+        <ul class="flex max-md:justify-end max-md:gap-4 max-sm:hidden justify-evenly items-center w-full font-normal">
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">Contact</li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">About</li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="../pages/signUp.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="max-md:hidden flex justify-between items-center gap-4">
+          <li class="flex items-center gap-6 rounded-md px-4 py-2 bg-[#F5F5F5]">
+            <input class="bg-[#F5F5F5] font-light text-sm focus:outline-none" type="text" placeholder="What are you looking for?">
+            <img class="cursor-pointer" src="../images/search.png" alt="">
+          </li>
+          <li class="p-1 hover:bg-gray-50 rounded-full cursor-pointer transition"><img src="../images/wishlist.png" alt=""></li>
+          <li class="p-1 hover:bg-gray-50 rounded-full cursor-pointer transition"><img src="../images/cart_with_buy.png" alt=""></li>
+        </ul>
+      </div>
+      <label for="menu-toggle" class="block sm:hidden hambuger cursor-pointer">
+        <ul class="flex flex-col gap-1 items-center px-2">
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+        </ul>
+      </label>
+    </div>
+  </div>
+
+  <div class="signup mt-16 mb-32">
+    <div class="flex">
+      <div class="w-1/2 max-md:hidden">
+        <a href="#"><img class="w-full h-full object-cover" src="../images/pages/signUp/dl-beatsnoop.png" alt=""></a>
+      </div>
+
+      <div class="w-1/2 max-md:w-full flex justify-center items-center">
+        <ul>
+          <li class="flex flex-col gap-2">
+            <span class="text-3xl font-semibold">Log in to Exclusive</span>
+            <span>Enter your details below</span>
+          </li>
+          <li class="py-6">
+            <form action="" class="flex flex-col gap-8">
+              <input class="border-b-[0.5px] border-black outline-none font-light" type="email" placeholder="Email or Phone Number">
+              <input class="border-b-[0.5px] border-black outline-none font-light" type="password" placeholder="Password">
+              <div class="flex justify-between gap-3">
+                <button class="bg-[#DB4444] text-white px-6 py-2 rounded-sm hover:text-gray-200 cursor-pointer transition">
+                  Login
+                </button>
+                <button class="flex flex-col gap-1 justify-start items-start text-[#DB4444]">
+                  <span class="font-light"><a class="cursor-pointer" href="./signUp.html">Forget Password?</a></span>
+                  <span class="font-light"><a class="cursor-pointer" href="./signUp.html">Sign Up</a></span>
+                </button>
+              </div>
+            </form>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-black text-white">
+    <div class="max-lg:px-2 min-h-[400px] max-w-[1200px] mx-auto flex justify-between">
+      <ul class="w-full flex flex-wrap max-sm:gap-8 justify-between max-sm:py-4 py-16">
+        <li class="max-sm:order-1 flex flex-col gap-4 max-sm:w-full">
+          <span class="text-[24px] font-bold max-sm:w-full">Exclusive</span>
+          <span class="text-[20px] font-medium">Subscribe</span>
+          <span class="text-[16px] font-light">Get 10% off your first order</span>
+          <span class="relative inline-block">
+            <input class="max-sm:w-full border border-white rounded-sm bg-black pl-3 pr-8 py-2 font-light text-sm focus:outline-none" type="text" placeholder="Enter your email">
+            <img class="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4" src="../images/footer/send.png" alt="">
+          </span>
+        </li>
+        <li class="max-sm:order-3 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Support</span>
+          <span class="text-[16px] font-light">111 Bijoy sarani, Dhaka,<br>DH 1515,Bangladesh.</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="mailto:exclusive@gmail.com">exclusive@gmail.com</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition href=" href="tel:88015-88888-9999">+88015-88888-9999</a></span>
+        </li>
+        <li class="max-sm:order-4 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Account</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">My Account</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Login / Register</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Cart</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Wishlist</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Shop</a></span>
+        </li>
+        <li class="max-sm:order-5 max-sm:w-full flex flex-col gap-4 ">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Quick Link</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Privacy Policy</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Terms Of Use</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">FAQ</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Contact</a></span>
+        </li>
+        <li class="max-sm:order-2 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Download App</span>
+          <span class="text-[12px] font-light text-gray-400">Save $3 with App New User Only</span>
+          <ul class="flex gap-1">
+            <li>
+              <img src="../images/footer/qr-code.png" alt="">
+            </li>
+            <li class="flex flex-col">
+              <a href="#"><img src="../images/footer/app-store.png" alt=""></a>
+              <a href="#"><img src="../images/footer/google-play.png" alt=""></a>
+            </li>
+          </ul>
+          <ul class="flex justify-start items-center gap-8">
+            <li><a href="#"><img src="../images/footer/fb.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/footer/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/footer/in.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/footer/linkedin.png" alt=""></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center p-4 text-[#3d3d3d] font-light border-t-[0.5px] border-[#3d3d3d]">
+      Copyright Rimel 2022. All right reserved
+    </div>
+  </footer>
+</body>
+
+</html>
