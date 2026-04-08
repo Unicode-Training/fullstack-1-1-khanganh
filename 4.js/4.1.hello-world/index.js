@@ -312,7 +312,117 @@ Chỉ dùng được so sánh bằng (===)
 // display(handler, "A", "B");
 // setTimeout(handler, 1000, "A", "B");
 
-//arrow function
+//arrow function (ES6)
+// const getMessage = (msg, type = "success") => {
+//   console.log("Hello anh em", msg);
+//   console.log(type);
+// };
+// getMessage("Unicode");
+// setTimeout(() => {
+//   console.log("Hello anh em");
+// }, 1000);
+// const sum = (a, b) => a + b;
+// console.log(sum(10, 20));
+
+// const getUser = () => ["An"];
+// console.log(getUser());
+
 //Closure
+// let a = 10;
+
+// const display = (value) => {
+//   let b = 20;
+//   const showMessage = (msg) => {
+//     console.log("Hello anh em");
+//     console.log(`msg`, msg);
+//     console.log(`b`, b);
+//     console.log(`value`, value);
+//     console.log(`a`, a);
+//   };
+//   showMessage("Học js không khó");
+// };
+// display("Hoàng An");
+
+// const display = (value) => {
+//   console.log("Display");
+//   return (msg) => {
+//     console.log("Học js không khó");
+//     console.log(`msg`, msg);
+//     console.log(`value`, value);
+//   };
+// };
+// const showMsg = display("Hoàng An");
+// showMsg("ABC");
+
+//Note:
+// - Bình thường: Hàm sẽ giải phóng các biến bên trong (Cục bộ) sau khi hàm thực thi xong
+
+// const counter = () => {
+//   let count = 0;
+//   return () => {
+//     count++;
+//     console.log(count);
+//   };
+// };
+// const incre = counter();
+// incre();
+// incre();
+// incre();
+// incre();
+
 //IIFE
+// ((value) => {
+//   console.log("Hello anh em", value);
+// })("An");
+
+// (async () => {
+//   const response = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+//   const data = await response.json();
+//   console.log(data);
+// })();
+
 //Đệ quy
+// - Phần cơ sở: Điều kiện dừng
+// - Phần gọi đệ quy: Cần phải thay đổi đối số hoặc 1 điều kiện nào đó để tiến gần đến phần cơ sở
+
+//Cách hoạt động
+// - Mỗi lần gọi hàm đệ quy --> Lưu giá trị vào RAM
+// - Khi nào chạy xong hết --> Thực hiện kết quả theo chiều ngược lại (Stack)
+
+//S = 1 + 2 + 3 ... n
+// const getTotal = (n) => {
+//   //Phần cơ sở
+//   if (n === 1) {
+//     return 1;
+//   }
+//   const result = n + getTotal(n - 1);
+//   console.log(n);
+
+//   return result;
+// };
+// console.log(getTotal(10));
+
+//10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1
+
+// class A {
+//   constructor() {}
+// }
+
+// class B {
+//   constructor() {}
+// }
+
+// const b = new B(new A());
+
+//Bài tập đệ quy: Tính tổng các số chẵn từ 1 đến n
+
+// const getTotal = (n) => {
+//   if (n < 2) {
+//     return 0;
+//   }
+//   if (n % 2 !== 0) {
+//     n--;
+//   }
+//   return n + getTotal(n - 2);
+// };
+// console.log(getTotal(15));
