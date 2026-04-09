@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      plugins: [
+        function({
+          addUtilities
+        }) {
+          addUtilities({
+            '.text-gradient': {
+              'color': '#b79bcc',
+              'background-image': 'linear-gradient(45deg, #b79bcc 19%, #81718b 42%, #d158e5 100%)',
+              'background-clip': 'text',
+              '-webkit-background-clip': 'text',
+              '-webkit-text-fill-color': 'transparent'
+            },
+          })
+        },
+      ],
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    html {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+    }
+
+    .hambuger_menu {
+      display: none;
+    }
+
+    #menu-toggle:checked~.hambuger_menu {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+  <input type="checkbox" id="menu-toggle" class="hidden">
+  <div class="hambuger_menu fixed inset-0 z-50 bg-black flex-col justify-center items-center">
+    <p class="fixed top-0 p-4 bg-white w-full flex justify-between items-center">
+      <a href="#"><img src="./images/exclusive_logo.png" alt=""></a>
+      <label for="menu-toggle" class="cursor-pointer text-black text-2xl font-light pr-2">
+        <img class="w-4 h-4" src="./images/close.png" alt="">
+      </label>
+    </p>
+    <ul class="flex flex-col gap-8 text-gradient text-4xl">
+      <li class="border-b-[0.2px] border-b-[#aa64ba]">
+        <a href="./index.html">Home</a>
+      </li>
+      <li>
+        <a href="./pages/contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="./pages/about.html">About</a>
+      </li>
+      <li>
+        <a href="./pages/signUp.html">Sign Up</a>
+      </li>
+      <li>
+        <a href="./login.html">Log In</a>
+      </li>
+    </ul>
+  </div>
+
+  <header class="bg-black">
+    <div class="min-h-[48px] max-w-[1200px] mx-auto flex justify-center items-center text-white relative">
+      <ul class="flex items-center gap-3">
+        <li class="max-md:py-2 font-light text-center">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</li>
+        <li class="max-sm:px-2 max-sm:border-0 max-sm:text-gradient flex justify-center items-center h-full font-semibold border-black border-b-[1px] hover:border-b-[1px] hover:border-white cursor-pointer transition">ShopNow</li>
+      </ul>
+      <ul class="hidden md:flex items-center gap-3 absolute right-0 bottom-0 top-0 px-4 py-2">
+        <li class="font-light">English</li>
+        <li class="cursor-pointer"><img src="./images/vector.png" alt=""></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="menu border-b-[1px]">
+    <div class="max-lg:px-2 max-md:mt-3 mt-8 mb-3 h-[48px] max-w-[1200px] mx-auto flex justify-between items-center">
+      <div class="flex justify-between items-center cursor-pointer">
+        <a href="#"><img src="./images/exclusive_logo.png" alt=""></a>
+      </div>
+      <div class="w-1/2 max-md:w-full flex justify-center">
+        <ul class="flex max-md:justify-end max-md:gap-4 max-sm:hidden justify-evenly items-center w-full font-normal">
+          <li class="border-b-[1px] border-gray-300 transition cursor-pointer">
+            <a href="#">Home</a>
+          </li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="./pages/contact.html">Contact</a>
+          </li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="./pages/about.html">About</a>
+          </li>
+          <li class="border-white border-b-[1px] hover:border-b-[1px] hover:border-gray-300 transition cursor-pointer">
+            <a href="./pages/signUp.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="max-md:hidden flex justify-between items-center gap-4">
+          <li class="flex items-center gap-6 rounded-md px-4 py-2 bg-[#F5F5F5]">
+            <input class="bg-[#F5F5F5] font-light text-sm focus:outline-none" type="text" placeholder="What are you looking for?">
+            <img class="cursor-pointer" src="./images/search.png" alt="">
+          </li>
+          <li class="p-1 hover:bg-gray-50 rounded-full cursor-pointer transition"><img src="./images/wishlist.png" alt=""></li>
+          <li class="p-1 hover:bg-gray-50 rounded-full cursor-pointer transition"><img src="./images/cart_with_buy.png" alt=""></li>
+        </ul>
+      </div>
+
+      <label for="menu-toggle" class="block sm:hidden hambuger cursor-pointer">
+        <ul class="flex flex-col gap-1 items-center px-2">
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+          <li class="w-6 h-1 bg-[#b440d7] rounded-md"></li>
+        </ul>
+      </label>
+    </div>
+  </div>
+
+  <div class="hero max-w-[1200px] mx-auto flex mb-24 max-sm:mb-12">
+    <ul class="max-lg:px-2 max-md:hidden min-w-[220px] border-r-[1px] pt-8 pr-6 font-light flex flex-col gap-3">
+      <li class="hover:text-gray-500 transition cursor-pointer">
+        <a href="#" class="flex justify-between items-center">
+          <span>Woman’s Fashion</span>
+          <img src="./images/hero/arrow_right.png" alt="">
+        </a>
+      </li>
+      <li class="hover:text-gray-500 transition cursor-pointer"><span>Men’s Fashion</span></li>
+      <li class="hover:text-gray-500 transition cursor-pointer">Electronics</li>
+      <li class="hover:text-gray-500 transition cursor-pointer">Home & Lifestyle</li>
+      <li class="hover:text-gray-500 transition cursor-pointer">Medicine</li>
+      <li class="hover:text-gray-500 transition cursor-pointer">Sports & Outdoor</li>
+      <li class="hover:text-gray-500 transition cursor-pointer">Baby’s & Toys</li>
+      <li class="hover:text-gray-500 transition cursor-pointer">Groceries & Pets</li>
+      <li class="hover:text-gray-500 transition cursor-pointer">Health & Beauty</li>
+    </ul>
+    <div class="bg-black max-md:m-0 mt-8 ml-8 max-sm:p-4 px-10 py-4 w-full text-white">
+      <ul class="flex max-sm:flex-col items-center">
+        <li class="flex flex-col gap-8">
+          <p class="flex items-center gap-4">
+            <img src="./images/hero/apple_logo.png" alt="">
+            <span class="font-light">iPhone 14 Series</span>
+          </p>
+          <p class="text-5xl font-semibold">Up to 10% off Voucher</p>
+          <p>
+            <a href="#" class="flex items-center gap-2">
+              <span class="border-b-[1px] border-black backdrop:hover:border-b-[1px] hover:border-white font-light">Shop Now</span>
+              <img src="./images/hero/arrow_right.png" alt="">
+            </a>
+          </p>
+        </li>
+        <li>
+          <img src="./images/hero/hero_01.png" alt="">
+        </li>
+      </ul>
+      <ul class="flex justify-center gap-2">
+        <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+        <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+        <li class="h-3 w-3 rounded-full bg-[#DB4444] border-[1px] border-white"></li>
+        <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+        <li class="h-3 w-3 bg-[#b2b2b2] rounded-full hover:bg-[#DB4444] cursor-pointer transition"></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="today max-lg:px-2 max-w-[1200px] mx-auto py-8 border-b-[1px] max-sm:border-b-0">
+    <div class="text-[#DB4444] font-semibold flex items-center gap-2 before:content-[''] before:inline-block before:w-4 before:h-8 before:bg-[#DB4444] before:rounded-sm mb-4">
+      Today’s
+    </div>
+
+    <div class="max-sm:flex-wrap max-sm:gap-4 flex justify-between items-center mb-4">
+      <div class="flex text-4xl font-semibold">
+        Flash Sales
+      </div>
+      <div class="max-sm:w-full w-1/2 flex justify-center">
+        <ul class="flex items-center gap-2">
+          <li class="flex flex-col items-start">
+            <span class="text-xs font-light">Days</span>
+            <span class="text-[32px] font-bold">03</span>
+          </li>
+          <li class="text-[#E07575] text-3xl">:</li>
+          <li class="flex flex-col items-start">
+            <span class="text-xs font-light">Hours</span>
+            <span class="text-[32px] font-bold">23</span>
+          </li>
+          <li class="text-[#E07575] text-3xl">:</li>
+          <li class="flex flex-col items-start">
+            <span class="text-xs font-light">Minutes</span>
+            <span class="text-[32px] font-bold">19</span>
+          </li>
+          <li class="text-[#E07575] text-3xl">:</li>
+          <li class="flex flex-col items-start">
+            <span class="text-xs font-light">Seconds</span>
+            <span class="text-[32px] font-bold">56</span>
+          </li>
+        </ul>
+      </div>
+      <div class="max-sm:hidden">
+        <ul class="flex justify-between items-center gap-4">
+          <li><img class="p-3 rounded-full bg-[#F5F5F5] cursor-pointer hover:bg-gray-200 transition" src="./images/today/arrow_left.png" alt=""></li>
+          <li><img class="p-3 rounded-full bg-[#F5F5F5] cursor-pointer hover:bg-gray-200 transition" src="./images/today/arrow_right.png" alt=""></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <ul class="max-sm:flex-col max-sm:gap-4 flex gap-8">
+        <li class="relative w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/today/frame_611.png" alt="HAVIT HV-G92 Gamepad">
+              <ul>
+                <li class="absolute top-[8px] left-[8px]"><span class="bg-[#DB4444] text-white px-2 py-1 rounded-sm text-xs">-40%</span></li>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <a href="./pages/product-detail.html">
+              <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+                <li><span>HAVIT HV-G92 Gamepad</span></li>
+                <li class="flex gap-2">
+                  <span class="text-[#db4443]">$120</span>
+                  <span class="text-gray-500 line-through font-light">$160</span>
+                </li>
+                <li class="flex gap-2 items-center">
+                  <div class="flex items-center">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  </div>
+                  <span class="text-gray-500">(88)</span>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+
+        <li class="relative w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/today/frame_612.png" alt="AK-900 Wired Keyboard">
+              <ul>
+                <li class="absolute top-[8px] left-[8px]"><span class="bg-[#DB4444] text-white px-2 py-1 rounded-sm text-xs">-35%</span></li>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <a href="./pages/product-detail.html">
+              <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+                <li><span>AK-900 Wired Keyboard</span></li>
+                <li class="flex gap-2">
+                  <span class="text-[#db4443]">$960</span>
+                  <span class="text-gray-500 line-through font-light">$1160</span>
+                </li>
+                <li class="flex gap-2 items-center">
+                  <div class="flex items-center">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  </div>
+                  <span class="text-gray-500">(75)</span>
+                </li>
+              </ul>
+            </a>
+
+          </div>
+        </li>
+
+        <li class="relative w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/today/frame_613.png" alt="">
+              <ul>
+                <li class="absolute top-[8px] left-[8px]"><span class="bg-[#DB4444] text-white px-2 py-1 rounded-sm text-xs">-30%</span></li>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <a href="./pages/product-detail.html">
+              <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+                <li><span>IPS LCD Gaming Monitor</span></li>
+                <li class="flex gap-2">
+                  <span class="text-[#db4443]">$370</span>
+                  <span class="text-gray-500 line-through font-light">$400</span>
+                </li>
+                <li class="flex gap-2 items-center">
+                  <div class="flex items-center">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star_gray.png" alt="">
+                  </div>
+                  <span class="text-gray-500">(99)</span>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+
+        <li class="relative w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/today/frame_614.png" alt="">
+              <ul>
+                <li class="absolute top-[8px] left-[8px]"><span class="bg-[#DB4444] text-white px-2 py-1 rounded-sm text-xs">-25%</span></li>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <a href="./pages/product-detail.html">
+              <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+                <li><span>S-Series Comfort Chair</span></li>
+                <li class="flex gap-2">
+                  <span class="text-[#db4443]">$375</span>
+                  <span class="text-gray-500 line-through font-light">$400</span>
+                </li>
+                <li class="flex gap-2 items-center">
+                  <div class="flex items-center">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star_half_filled.png" alt="">
+                  </div>
+                  <span class="text-gray-500">(99)</span>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+
+        <li class="max-sm:hidden relative">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] w-[270px] h-[250px] rounded-sm flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/today/frame_614.png" alt="">
+              <ul>
+                <li class="absolute top-[8px] left-[8px]"><span class="bg-[#DB4444] text-white px-2 py-1 rounded-sm text-xs">-25%</span></li>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <a href="./pages/product-detail.html">
+              <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+                <li><span>S-Series Comfort Chair</span></li>
+                <li class="flex gap-2">
+                  <span class="text-[#db4443]">$375</span>
+                  <span class="text-gray-500 line-through font-light">$400</span>
+                </li>
+                <li class="flex gap-2 items-center">
+                  <div class="flex items-center">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                    <img class="w-[13px] h-[13px]" src="./images/today/star_half_filled.png" alt="">
+                  </div>
+                  <span class="text-gray-500">(99)</span>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex justify-center mb-4">
+      <button class="max-sm:w-full bg-[#DB4444] text-white px-6 py-2 rounded-sm hover:text-gray-200 transition">
+        View All Products
+      </button>
+    </div>
+  </div>
+
+  <div class="categories max-lg:px-2 max-w-[1200px] mx-auto py-8 border-b-[1px] max-sm:border-b-0">
+    <div class="text-[#DB4444] font-semibold flex items-center gap-2 before:content-[''] before:inline-block before:w-4 before:h-8 before:bg-[#DB4444] before:rounded-sm mb-4">
+      Categories
+    </div>
+    <div class="flex justify-between items-center mb-4">
+      <div class="flex text-4xl font-semibold">
+        Browse By Category
+      </div>
+      <div class="max-sm:hidden">
+        <ul class="flex justify-between items-center gap-4">
+          <li><img class="p-3 rounded-full bg-[#F5F5F5] cursor-pointer hover:bg-gray-200 transition" src="./images/today/arrow_left.png" alt=""></li>
+          <li><img class="p-3 rounded-full bg-[#F5F5F5] cursor-pointer hover:bg-gray-200 transition" src="./images/today/arrow_right.png" alt=""></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mb-10">
+      <ul class="flex justify-between max-sm:justify-center max-sm:flex-wrap max-sm:gap-2">
+        <li class="w-[170px] h-[145px] border-[1px] rounded-md flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#DB4444] transition">
+          <img class="w-[56px] h-[56px]" src="./images/categories/cell_phone.png" alt="">
+          <span class="font-light">Phones</span>
+        </li>
+        <li class="w-[170px] h-[145px] border-[1px] rounded-md flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#DB4444] transition">
+          <img class="w-[56px] h-[56px]" src="./images/categories/computer.png" alt="">
+          <span class="font-light">Computers</span>
+        </li>
+        <li class="w-[170px] h-[145px] border-[1px] rounded-md flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#DB4444] transition">
+          <img class="w-[56px] h-[56px]" src="./images/categories/smart_watch.png" alt="">
+          <span class="font-light">SmartWatch</span>
+        </li>
+        <li class="w-[170px] h-[145px] border-[1px] rounded-md flex flex-col items-center justify-center gap-2 cursor-pointer bg-[#DB4444] transition">
+          <img class="w-[56px] h-[56px]" src="./images/categories/camera.png" alt="">
+          <span class="font-light text-white">Camera</span>
+        </li>
+        </li>
+        <li class="w-[170px] h-[145px] border-[1px] rounded-md flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#DB4444] transition">
+          <img class="w-[56px] h-[56px]" src="./images/categories/headphone.png" alt="">
+          <span class="font-light">HeadPhones</span>
+        </li>
+        <li class="w-[170px] h-[145px] border-[1px] rounded-md flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#DB4444] transition">
+          <img class="w-[56px] h-[56px]" src="./images/categories/gamepad.png" alt="">
+          <span class="font-light">Gaming</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="this_month max-sm:flex max-sm:flex-col max-lg:px-2 max-w-[1200px] mx-auto py-16">
+    <div class="max-sm:order-1 text-[#DB4444] font-semibold flex items-center gap-2 before:content-[''] before:inline-block before:w-4 before:h-8 before:bg-[#DB4444] before:rounded-sm mb-4">
+      This Month
+    </div>
+
+    <div class="max-sm:contents flex justify-between items-center mb-4">
+      <div class="max-sm:order-2 flex text-4xl font-semibold">
+        Best Selling Products
+      </div>
+      <div class="max-sm:order-4">
+        <button class="max-sm:w-full bg-[#DB4444] text-white px-6 py-2 rounded-sm hover:text-gray-200 transition">
+          View All
+        </button>
+      </div>
+    </div>
+
+    <div class="max-sm:order-3 mb-10">
+      <ul class="flex flex-wrap justify-between max-lg:justify-center gap-2">
+        <li class="relative max-sm:w-full max-sm:h-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/this_month/frame_605.png" alt="HAVIT HV-G92 Gamepad">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>The north coat</span></li>
+              <li class="flex gap-2">
+                <span class="text-[#db4443]">$260</span>
+                <span class="text-gray-500 line-through font-light">$360</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                </div>
+                <span class="text-gray-500">(65)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full max-sm:h-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/this_month/frame_606.png" alt="HAVIT HV-G92 Gamepad">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>Gucci duffle bag</span></li>
+              <li class="flex gap-2">
+                <span class="text-[#db4443]">$960</span>
+                <span class="text-gray-500 line-through font-light">$1160</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_half_filled.png" alt="">
+                </div>
+                <span class="text-gray-500">(65)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full max-sm:h-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/this_month/frame_610.png" alt="HAVIT HV-G92 Gamepad">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>RGB liquid CPU Cooler</span></li>
+              <li class="flex gap-2">
+                <span class="text-[#db4443]">$160</span>
+                <span class="text-gray-500 line-through font-light">$170</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_half_filled.png" alt="">
+                </div>
+                <span class="text-gray-500">(65)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full max-sm:h-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/this_month/frame_612.png" alt="HAVIT HV-G92 Gamepad">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>Small BookSelf</span></li>
+              <li class="flex gap-2">
+                <span class="text-[#db4443]">$360</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                </div>
+                <span class="text-gray-500">(65)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="advertisement max-lg:px-2 max-w-[1200px] min-h-[450px] mx-auto bg-black max-md:p-8 max-sm:p-4 p-16 flex max-sm:flex-col justify-between items-center max-sm:items-start max-sm:mb-12 text-white">
+    <div class="max-sm:order-2 flex flex-col gap-8 max-w-[300px]">
+      <div class="text-[#00FF66]">Categories</div>
+      <div class="text-4xl font-semibold">Enhance Your Music Experience</div>
+      <ul class="flex gap-5">
+        <li class="w-[60px] h-[60px] bg-white rounded-full flex flex-col items-center justify-center text-black">
+          <span class="font-semibold">23</span>
+          <span class="text-[11px] font-light">Hours</span>
+        </li>
+        <li class="w-[60px] h-[60px] bg-white rounded-full flex flex-col items-center justify-center text-black">
+          <span class="font-semibold">05</span>
+          <span class="text-[11px] font-light">Days</span>
+        </li>
+        <li class="w-[60px] h-[60px] bg-white rounded-full flex flex-col items-center justify-center text-black">
+          <span class="font-semibold">59</span>
+          <span class="text-[11px] font-light">Minutes</span>
+        </li>
+        <li class="w-[60px] h-[60px] bg-white rounded-full flex flex-col items-center justify-center text-black">
+          <span class="font-semibold">35</span>
+          <span class="text-[11px] font-light">Seconds</span>
+        </li>
+      </ul>
+      <div class="max-sm:order-3">
+        <button class="bg-[#00FF66] text-white px-6 py-2 rounded-sm hover:text-gray-200 transition">
+          Buy Now!
+        </button>
+      </div>
+    </div>
+    <div class="absolute right-0">
+      <img class="opacity-80" src="./images/gap/ellipse.png" alt="">
+    </div>
+    <div class="max-sm:order-1 relative">
+      <img src="./images/gap/jbl_zoom.png" alt="">
+    </div>
+  </div>
+
+
+  <div class="our_products max-lg:px-2 max-w-[1200px] mx-auto py-8">
+    <div class="text-[#DB4444] font-semibold flex items-center gap-2 before:content-[''] before:inline-block before:w-4 before:h-8 before:bg-[#DB4444] before:rounded-sm mb-4">
+      Our Products
+    </div>
+
+    <div class="flex justify-between items-center mb-4">
+      <div class="flex text-4xl font-semibold">
+        Explore Our Products
+      </div>
+      <div class="max-sm:hidden">
+        <ul class="flex justify-between items-center gap-4">
+          <li><img class="p-3 rounded-full bg-[#F5F5F5] cursor-pointer hover:bg-gray-200 transition" src="./images/today/arrow_left.png" alt=""></li>
+          <li><img class="p-3 rounded-full bg-[#F5F5F5] cursor-pointer hover:bg-gray-200 transition" src="./images/today/arrow_right.png" alt=""></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <ul class="flex flex-wrap gap-8">
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_1.png" alt="Breed Dry Dog Food">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>Breed Dry Dog Food</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$100</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_gray.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_gray.png" alt="">
+                </div>
+                <span class="text-gray-500">(35)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_2.png" alt="CANON EOS DSLR Camera">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>CANON EOS DSLR Camera</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$360</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_gray.png" alt="">
+                </div>
+                <span class="text-gray-500">(95)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_3.png" alt="ASUS FHD Gaming Laptop">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>ASUS FHD Gaming Laptop</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$700</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                </div>
+                <span class="text-gray-500">(325)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_4.png" alt="Curology Product Set">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>Curology Product Set</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$500</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_gray.png" alt="">
+                </div>
+                <span class="text-gray-500">(145)</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_5.png" alt="Kids Electric Car">
+              <ul>
+                <li class="absolute top-[8px] left-[8px]"><span class="bg-[#00FF66] text-white px-2 py-1 rounded-sm text-xs">-40%</span></li>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>Kids Electric Car</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$960</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_gray.png" alt="">
+                </div>
+                <span class="text-gray-500">(65)</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <p class="w-[15px] h-[15px] bg-red-600 rounded-full border-[2px] border-white outline outline-black"></p>
+                <p class="w-[17px] h-[17px] bg-[#db4443] rounded-full"></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_6.png" alt="Jr. Zoom Soccer Cleats">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>Jr. Zoom Soccer Cleats</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$1160</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                </div>
+                <span class="text-gray-500">(35)</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <p class="w-[15px] h-[15px] bg-[#edff62] rounded-full border-[2px] border-white outline outline-black"></p>
+                <p class="w-[17px] h-[17px] bg-[#db4443] rounded-full"></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_7.png" alt="GP11 Shooter USB Gamepad">
+              <ul>
+                <li class="absolute top-[8px] left-[8px]"><span class="bg-[#00FF66] text-white px-2 py-1 rounded-sm text-xs">-40%</span></li>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>GP11 Shooter USB Gamepad</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$660</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_half_filled.png" alt="">
+                </div>
+                <span class="text-gray-500">(55)</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <p class="w-[15px] h-[15px] bg-black rounded-full border-[2px] border-white outline outline-black"></p>
+                <p class="w-[17px] h-[17px] bg-[#db4443] rounded-full"></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="relative max-sm:w-full">
+          <div>
+            <div class="group/product relative bg-[#F5F5F5] min-w-[270px] min-h-[250px] rounded-sm overflow-hidden flex items-center justify-center">
+              <img class="items-center inline-block" src="./images/our_products/our_product_8.png" alt="Quilted Satin Jacket">
+              <ul>
+                <li class="absolute top-[8px] right-[8px] flex flex-col gap-2">
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/heart.png" alt=""></a>
+                  </span>
+                  <span>
+                    <a href="#"><img class="p-2 rounded-full bg-white hover:bg-gray-200 transition cursor-pointer" src="./images/today/quick_view.png" alt=""></a>
+                  </span>
+                </li>
+              </ul>
+              <div class="opacity-0 group-hover/product:opacity-100 hover:text-gray-300 transition cursor-pointer absolute bottom-0 w-full bg-black text-white text-center py-2">
+                <a href="#">Add To Cart</a>
+              </div>
+            </div>
+
+            <ul class="cursor-pointer flex flex-col mt-2 gap-1">
+              <li><span>Quilted Satin Jacket</span></li>
+              <li class="flex gap-2 items-center">
+                <span class="text-[#db4443]">$660</span>
+                <div class="flex items-center">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star.png" alt="">
+                  <img class="w-[13px] h-[13px]" src="./images/today/star_half_filled.png" alt="">
+                </div>
+                <span class="text-gray-500">(55)</span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <p class="w-[15px] h-[15px] bg-black rounded-full border-[2px] border-white outline outline-black"></p>
+                <p class="w-[17px] h-[17px] bg-[#db4443] rounded-full"></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex justify-center mb-4">
+      <button class="max-sm:w-full bg-[#DB4444] text-white px-6 py-2 rounded-sm hover:text-gray-200 transition">
+        View All Products
+      </button>
+    </div>
+  </div>
+
+
+  <div class="featured max-lg:px-2 max-w-[1200px] mx-auto py-8">
+    <div class="text-[#DB4444] font-semibold flex items-center gap-2 before:content-[''] before:inline-block before:w-4 before:h-8 before:bg-[#DB4444] before:rounded-sm mb-4">
+      Featured
+    </div>
+
+    <div class="flex justify-between items-center mb-4">
+      <div class="flex text-4xl font-semibold">
+        New Arrival
+      </div>
+    </div>
+
+    <div class="max-sm:gap-2 max-sm:flex-col flex gap-8 min-h-[600px]">
+      <div class="max-sm:order-1 relative flex-1 bg-black rounded-md">
+        <img class="max-sm:static absolute bottom-0 right-0" src="./images/featured/ps5.png" alt="">
+        <ul class="w-[50%] absolute bottom-0 p-6 text-white flex flex-col gap-3">
+          <li class="text-2xl font-semibold">PlayStation 5</li>
+          <li class="text-[14px] font-light">Black and White version of the PS5 coming out on sale.</li>
+          <li>
+            <p class="inline border-b-[0.5px] border-white font-light cursor-pointer">Shop Now</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="max-sm:order-2 flex-1 flex flex-col justify-between max-sm:gap-2 gap-8">
+        <div class="relative flex-1 bg-black flex items-end rounded-md overflow-hidden h-[50%]">
+          <img class="absolute right-0 top-0 h-full w-auto object-cover" src="./images/featured/attractive_woman.png" alt="">
+
+          <ul class="w-[50%] relative bottom-0 left-0 text-white p-6 flex flex-col gap-3">
+            <li class="text-2xl font-semibold">Women’s Collections</li>
+            <li class="text-[14px] font-light">Featured woman collections that give you another vibe.</li>
+            <li>
+              <p class="inline border-b-[0.5px] border-white font-light cursor-pointer">Shop Now</p>
+            </li>
+          </ul>
+        </div>
+        <div class="max-sm:gap-2 max-sm:flex-col flex gap-8 h-[50%]">
+          <div class="relative flex-1 bg-black rounded-sm max-sm:rounded-md flex items-end">
+            <img class="absolute max-sm:static max-sm:p-2 max-sm:w-[50%] inset-0 m-auto" src="./images/featured/frame_707.png" alt="">
+            <ul class="relative text-white p-6 flex flex-col gap-2">
+              <li class="text-2xl font-semibold">Speakers</li>
+              <li class="text-[14px] font-light">Amazon wireless speakers</li>
+              <li>
+                <p class="inline border-b-[0.5px] border-white font-light cursor-pointer">Shop Now</p>
+              </li>
+            </ul>
+          </div>
+          <div class="relative flex-1 bg-black rounded-sm max-sm:rounded-md flex items-end">
+            <img class="absolute max-sm:static max-sm:p-2 max-sm:w-[50%] inset-0 m-auto" src="./images/featured/frame_708.png" alt="">
+            <ul class="relative text-white p-6 flex flex-col gap-2">
+              <li class="text-2xl font-semibold">Perfume</li>
+              <li class="text-[14px] font-light">GUCCI INTENSE OUD EDP</li>
+              <li>
+                <p class="inline border-b-[0.5px] border-white font-light cursor-pointer">Shop Now</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="support max-w-[1200px] mx-auto py-16">
+    <div class="flex flex-wrap justify-center items-center gap-14 max-sm:gap-8">
+      <div class="flex flex-col justify-between items-center gap-2">
+        <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+          <img class="w-[30px]" src="./images/support/delivery.png" alt="">
+        </div>
+        <div class="flex items-center flex-col gap-1">
+          <span class="text-[20px] font-semibold">FREE AND FAST DELIVERY</span>
+          <span class="text-[14px] font-light">Free delivery for all orders over $140</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-between items-center gap-2">
+        <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+          <img class="w-[30px]" src="./images/support/customer-service.png" alt="">
+        </div>
+        <div class="flex items-center flex-col gap-1">
+          <span class="text-[20px] font-semibold">24/7 CUSTOMER SERVICE</span>
+          <span class="text-[14px] font-light">Friendly 24/7 customer support</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-between items-center gap-2">
+        <div class=" bg-black p-2 flex items-center justify-center rounded-full border-[8px] border-[#c1c0c1] hover:border-gray-300 transition cursor-pointer">
+          <img class="w-[30px]" src="./images/support/secure.png" alt="">
+        </div>
+        <div class="flex items-center flex-col gap-1">
+          <span class="text-[20px] font-semibold">MONEY BACK GUARANTEE</span>
+          <span class="text-[14px] font-light">We reurn money within 30 days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-black text-white">
+    <div class="max-lg:px-2 min-h-[400px] max-w-[1200px] mx-auto flex justify-between">
+      <ul class="w-full flex flex-wrap max-sm:gap-8 justify-between max-sm:py-4 py-16">
+        <li class="max-sm:order-1 flex flex-col gap-4 max-sm:w-full">
+          <span class="text-[24px] font-bold max-sm:w-full">Exclusive</span>
+          <span class="text-[20px] font-medium">Subscribe</span>
+          <span class="text-[16px] font-light">Get 10% off your first order</span>
+          <span class="relative inline-block">
+            <input class="max-sm:w-full border border-white rounded-sm bg-black pl-3 pr-8 py-2 font-light text-sm focus:outline-none" type="text" placeholder="Enter your email">
+            <img class="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4" src="./images/footer/send.png" alt="">
+          </span>
+        </li>
+        <li class="max-sm:order-3 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Support</span>
+          <span class="text-[16px] font-light">111 Bijoy sarani, Dhaka,<br>DH 1515,Bangladesh.</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="mailto:exclusive@gmail.com">exclusive@gmail.com</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition href=" href="tel:88015-88888-9999">+88015-88888-9999</a></span>
+        </li>
+        <li class="max-sm:order-4 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Account</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">My Account</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Login / Register</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Cart</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Wishlist</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Shop</a></span>
+        </li>
+        <li class="max-sm:order-5 max-sm:w-full flex flex-col gap-4 ">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Quick Link</span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Privacy Policy</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Terms Of Use</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">FAQ</a></span>
+          <span class="text-[16px] font-light"><a class="hover:border-b-[0.5px] hover:border-white transition" href="">Contact</a></span>
+        </li>
+        <li class="max-sm:order-2 max-sm:w-full flex flex-col gap-4">
+          <span class="text-[20px] font-medium max-sm:border-b-[0.1px] max-sm:border-dashed max-sm:border-[#3d3d3d]">Download App</span>
+          <span class="text-[12px] font-light text-gray-400">Save $3 with App New User Only</span>
+          <ul class="flex gap-1">
+            <li>
+              <img src="./images/footer/qr-code.png" alt="">
+            </li>
+            <li class="flex flex-col">
+              <a href="#"><img src="./images/footer/app-store.png" alt=""></a>
+              <a href="#"><img src="./images/footer/google-play.png" alt=""></a>
+            </li>
+          </ul>
+          <ul class="flex justify-start items-center gap-8">
+            <li><a href="#"><img src="./images/footer/fb.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/footer/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/footer/in.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/footer/linkedin.png" alt=""></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center p-4 text-[#3d3d3d] font-light border-t-[0.5px] border-[#3d3d3d]">
+      Copyright Rimel 2022. All right reserved
+    </div>
+  </footer>
+</body>
+
+</html>
