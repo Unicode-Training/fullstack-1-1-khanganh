@@ -72,7 +72,7 @@ console.dir(String.prototype);
 
 //Bài tập Highlight
 // - Tìm --> highlight --> cắt --> tìm chuỗi mới --> Cho đến khi hết
-let keyword = " ";
+let keyword = "javascript";
 let content = `<h3>Học lập trình javascript. Học lập trình javascript. Học lập trình javascript. Học lập trình javascript. vhduvhd vdhvudh</h3>`;
 
 let pos = content.toLowerCase().indexOf(keyword.toLowerCase());
