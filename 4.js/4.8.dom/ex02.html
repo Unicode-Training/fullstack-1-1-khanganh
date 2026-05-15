@@ -11,15 +11,38 @@
       .active span {
         display: block;
       }
+      button {
+        border: 0;
+        background: green;
+        color: #fff;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 10;
+      }
+      .drop {
+        width: 150px;
+        height: 150px;
+        background: yellow;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: none;
+      }
+      .drop.active {
+        display: block;
+      }
     </style>
   </head>
   <body>
-    <ul>
+    <!-- <ul>
       <li>Item 1 <span>Content 1</span></li>
       <li>Item 2 <span>Content 2</span></li>
       <li>Item 3 <span>Content 3</span></li>
       <li>Item 4 <span>Content 4</span></li>
-    </ul>
+    </ul> -->
+
+    <button>Click me</button>
+    <div class="drop"></div>
     <script src="js/ex02.js"></script>
   </body>
 </html>
