@@ -17,14 +17,31 @@
 //     console.log(item.innerText);
 // })
 
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
+// const nextBtn = document.querySelector('.next-btn');
+// const prevBtn = document.querySelector('.prev-btn');
 
-nextBtn.addEventListener('click', () => {
-    const activeItem = document.querySelector('.active');
-    activeItem.nextElementSibling.classList.add('active');
-    activeItem.classList.remove('active');
-});
-prevBtn.addEventListener('click', () => {
+// nextBtn.addEventListener('click', () => {
+//     const activeItem = document.querySelector('.active');
+//     const nextItem = activeItem.nextElementSibling;
+//     if (nextItem) {
+//         nextItem.classList.add('active');
+//         activeItem.classList.remove('active');
+//     } else {
+//         const firstItem = activeItem.parentElement.firstElementChild;
+//         firstItem.classList.add('active');
+//         activeItem.classList.remove('active');
+//     }
 
-});
+// });
+// prevBtn.addEventListener('click', () => {
+//     const activeItem = document.querySelector('.active');
+//     const prevItem = activeItem.previousElementSibling;
+//     if (prevItem) {
+//         prevItem.classList.add('active');
+//         activeItem.classList.remove('active');
+//     } else {
+//         const lastItem = activeItem.parentElement.lastElementChild;
+//         lastItem.classList.add('active');
+//         activeItem.classList.remove('active');
+//     }
+// });
