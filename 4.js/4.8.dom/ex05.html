@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      .box ul li {
+        @apply py-3 font-medium;
+      }
+      .box ul li span {
+        @apply cursor-pointer;
+      }
+      .active {
+        @apply bg-yellow-100 transition-colors;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="js-box box max-w-[80%] mx-auto py-3 my-3 border border-[red] p-5"
+    >
+      <ul>
+        <li>
+          Item 1
+          <span class="js-up text-green-600">Up</span>
+          <span class="js-down text-red-600">Down</span>
+        </li>
+        <li>
+          Item 2
+          <span class="js-up text-green-600">Up</span>
+          <span class="js-down text-red-600">Down</span>
+        </li>
+        <li>
+          Item 3
+          <span class="js-up text-green-600">Up</span>
+          <span class="js-down text-red-600">Down</span>
+        </li>
+        <li>
+          Item 4
+          <span class="js-up text-green-600">Up</span>
+          <span class="js-down text-red-600">Down</span>
+        </li>
+        <li>
+          Item 5
+          <span class="js-up text-green-600">Up</span>
+          <span class="js-down text-red-600">Down</span>
+        </li>
+      </ul>
+    </div>
+    <script src="js/ex05.js"></script>
+  </body>
+</html>
